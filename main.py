@@ -11,12 +11,12 @@ from sqlalchemy.orm import Session
 import secrets
 
 from  database import Base, engine, get_db
-from . import models, schemas
-from .security import (
+from   import models, schemas
+from  security import (
     create_access_token, decode_access_token, hash_password, verify_password,
 )
-from .firebase_auth import verify_firebase_token
-from .matching import find_matches
+from  firebase_auth import verify_firebase_token
+from  matching import find_matches
 
 Base.metadata.create_all(bind=engine)
 
